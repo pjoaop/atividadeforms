@@ -7,6 +7,7 @@ def cadastro_pessoa(request):
         form = PessoaForm(request.POST)
         if form.is_valid():
             form.save()
+            form = PessoaForm()
     else:
         form = PessoaForm()
 
